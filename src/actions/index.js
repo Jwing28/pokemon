@@ -26,7 +26,6 @@ export const getRandomPokemon = () => {
     return fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}/`)
       .then(result => result.json())
       .then(data => {
-        console.log("new data??", data);
         dispatch(getRandomPokemonSuccess(data));
       })
       .catch(error => console.error(error));
